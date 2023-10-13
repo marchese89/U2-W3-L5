@@ -16,7 +16,6 @@ async function allProduct() {
   }
   if (res.ok) {
     const data = await res.json();
-    console.log(data);
     showAllProducts(data);
   } else {
     alert("Si è verificato un errore nel caricamento");
@@ -35,34 +34,24 @@ function showAllProducts(data) {
     const col = document.createElement("div");
     col.classList.add("col", "col-12", "col-md-6", "col-lg-4", "col-xl-3");
 
-    if (mod === "true") {
-      col.innerHTML += `<div class="card d-flex flex-column" >
+    col.innerHTML += `<div class="card d-flex flex-column" >
       <img src="${prod.imageUrl}" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
+      <div class="card-body d-flex flex-column flex-grow-1">
         <h4 class="card-title">${prod.name}</h4>
         <p class="card-text"><strong>Descrizione</strong></p>
         <p class="card-text">${prod.description}</p>
         <p class="card-text">Marca: ${prod.brand}</p>
         <p class="card-text">Prezzo: ${prod.price} <strong>&euro;</strong></p>
-        <a href="back-office.html?id=${prod._id}" class="btn btn-warning mb-2">Modifica</a>
-        <a href="#" class="btn btn-danger" onclick="deleteProduct('${prod._id}')">Elimina</a>
+        <a href="back-office.html?id=${
+          prod._id
+        }" class="btn btn-warning mb-2">Modifica</a>
+        ${
+          mod === "true"
+            ? `<a href="#" class="btn btn-danger" onclick="deleteProduct('${prod._id}')">Elimina</a>`
+            : ``
+        }
         </div>
         </div>`;
-    } else {
-      col.innerHTML = `
-        <div class="card d-flex flex-column" >
-  <img src="${prod.imageUrl}" class="card-img-top" alt="...">
-  <div class="card-body d-flex flex-column">
-    <h4 class="card-title">${prod.name}</h4>
-    <p class="card-text"><strong>Descrizione</strong></p>
-    <p class="card-text">${prod.description}</p>
-    <p class="card-text">Marca: ${prod.brand}</p>
-    <p class="card-text">Prezzo: ${prod.price} <strong>&euro;</strong></p>
-    <a href="back-office.html?id=${prod._id}" class="btn btn-warning mb-2">Modifica</a>
-    <a href="detail.html?id=${prod._id}&view=ok" class="btn btn-info">Scopri di più</a>
-    </div>
-        </div>`;
-    }
 
     products.appendChild(col);
   });
