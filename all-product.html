@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="position-relative">
+    <header>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid justify-content-start">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="all-product.html">Tutti prodotti</a>
+          <a class="navbar-brand" href="back-office.html">Nuovo Prodotto</a>
+          <a class="navbar-brand" href="all-product.html?mod=true"
+            >Modifica Prodotti</a
+          >
+        </div>
+      </nav>
+      <h1 class="text-center">All Products</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row justify-content-center" id="produts">
+          <div
+            class="spinner-border text-primary position-absolute top-100"
+            role="status"
+            id="spinner"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="all-product.js"></script>
+  </body>
+</html>
