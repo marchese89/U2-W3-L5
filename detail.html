@@ -26,6 +26,9 @@
       <div class="text-center mb-3">
         <button class="btn btn-info" id="reset">RESET FORM</button>
       </div>
+      <div class="text-center my-3">
+        <img alt="" id="img" class="border rounded-3" />
+      </div>
       <form id="create-product" name="create-product" autocomplete="on">
         <div class="container w-25">
           <span class="input-group-text">Nome</span>
@@ -36,7 +39,6 @@
             aria-describedby="inputGroup-sizing-lg"
             id="name"
             autocomplete="on"
-            required
           />
           <span class="input-group-text">Descrizione</span>
           <input
@@ -45,7 +47,6 @@
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg"
             id="description"
-            required
           />
           <span class="input-group-text">Brand</span>
           <input
@@ -54,16 +55,6 @@
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg"
             id="brand"
-            required
-          />
-          <span class="input-group-text">URL Immagine</span>
-          <input
-            type="text"
-            class="form-control mb-3"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg"
-            id="imageUrl"
-            required
           />
           <span class="input-group-text">Prezzo</span>
           <input
@@ -72,7 +63,6 @@
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg"
             id="price"
-            required
           />
         </div>
         <div class="text-center" id="form-btn">
